@@ -1,4 +1,4 @@
-package Student_Information;
+package Student_Information_classes;
 
 public class Courses {
     Teacher teacher;

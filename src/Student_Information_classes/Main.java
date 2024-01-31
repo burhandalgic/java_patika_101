@@ -1,6 +1,4 @@
-package Student_Information;
-
-import java.util.Scanner;
+package Student_Information_classes;
 
 public class Main {
     public static void main(String[] args) {

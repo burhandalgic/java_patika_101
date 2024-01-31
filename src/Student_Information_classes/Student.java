@@ -1,6 +1,5 @@
-package Student_Information;
+package Student_Information_classes;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Student {
