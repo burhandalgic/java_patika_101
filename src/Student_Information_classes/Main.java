@@ -20,8 +20,5 @@ public class Main {
         s1.printInformation();
 
 
-
-
-
     }
 }
