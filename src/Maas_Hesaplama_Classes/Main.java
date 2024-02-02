@@ -8,7 +8,5 @@ public class Main {
       Employe e1= new Employe("emre mor", 2000, 45,1985);
       e1.toStringg();
 
-
-
     }
 }
