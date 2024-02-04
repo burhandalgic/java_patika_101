@@ -22,12 +22,12 @@ static boolean check (int x,int[] list){
             for (int j = 0; j<list.length;j++) {
                 if(   (list[i]==list[j]) && (i!=j) && (list[i]%2==0) && check(list[i],newList) ) {
                     newList[index]=list[i];
-                   index++;
+                   index=index+1;
                 }
             }
         }
         Arrays.sort(newList);
-        for (int i=0; i < newList.length;i++){
+        for (int i=0 ; i < newList.length;i++){
             if (newList[i]!=0)
                 System.out.println(newList[i]);
         }

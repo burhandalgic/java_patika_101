@@ -29,7 +29,7 @@ static boolean check (int x,int[] list){
             if (check(list[i],newList)) {
                 newList[index] = list[i];
                 index++;
-                System.out.println(list[i] + " sayısı " + repeat + " kere tekrar edildi");
+                System.out.println(list[i] + " sayısı  " + repeat + " kere tekrar edildi");
             }
 
 
