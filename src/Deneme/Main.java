@@ -2,60 +2,24 @@ package Deneme;
 
 import java.util.Scanner;
 
-public class Main {
-    public static boolean canWin(int leap, int[] game) {
-        int n=game.length;
-        int i=0;
-        boolean back=false;
-        boolean front=false;
-        while (true){
-
-            if ( (i+leap)>=n || i==n-1)
-                return true;
-
-            if ( (game[i+leap]==0 ) ) {
-                i=i+leap;
-                front=false;
-                back=false;
-                continue;}
-
-            if ( (game[i+1]==0 && back!=true ) ){
-                i++;
-                front=true;
-                back=false;
-                continue;}
-
-            if (i>0){
-                if ( (game[i-1]==0) && front!=true) {
-                    i--;
-                    front=false;
-                    back=true;
-                    continue;
-                }
+public class Main  {
+        public static void main(String[] args) {
+            MyCalculator my_calculator = new MyCalculator();
+            System.out.print("I implemented: ");
+            ImplementedInterfaceNames(my_calculator);
+            Scanner sc = new Scanner(System.in);
+            int n = sc.nextInt();
+            System.out.print(my_calculator.divisor_sum(n) + "\n");
+            sc.close();
+        }
+        /*
+         *  ImplementedInterfaceNames method takes an object and prints the name of the interfaces it implemented
+         */
+        static void ImplementedInterfaceNames(Object o){
+            Class[] theInterfaces = o.getClass().getInterfaces();
+            for (int i = 0; i < theInterfaces.length; i++){
+                String interfaceName = theInterfaces[i].getName();
+                System.out.println(interfaceName);
             }
-
-            return false;
         }
     }
-
-
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        int q = scan.nextInt();
-        int k=0;
-        while (q-- > 0) {
-            int n = scan.nextInt();
-            int leap = scan.nextInt();
-
-            int[] game = new int[n];
-            for (int i = 0; i < n; i++) {
-                game[i] = scan.nextInt();
-            }
-
-            System.out.println( (canWin(leap, game)) ? "YES" : "NO" );
-        }
-        scan.close();
-        System.out.println(k);
-    }
-}
-
