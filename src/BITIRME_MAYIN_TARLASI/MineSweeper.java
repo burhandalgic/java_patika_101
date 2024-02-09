@@ -17,7 +17,6 @@ public class MineSweeper {
         this.colNumber = colNumber;
         this.mapListFirst=new char[rowNumber][colNumber];
         this.boardList = new char[rowNumber][colNumber];
-        this.boardList = new char[rowNumber][colNumber];
     }
 
     public void run() {
@@ -78,7 +77,7 @@ public class MineSweeper {
                 }
             }
 
-            if (check == false) {
+            if (!check) {
                 starList.add(randomNumber);
                 i++;
             }
